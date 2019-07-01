@@ -1,0 +1,8 @@
+.page__parent {
+    width: 100%;
+}
+.main__box {
+    width: $pageWidth;
+    margin: 0 auto;
+    padding: 20px 0px;
+}
