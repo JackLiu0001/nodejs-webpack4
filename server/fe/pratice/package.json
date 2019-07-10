@@ -1,5 +1,12 @@
 {
   "name": "fe",
+  "sideEffects": [
+    "*.css",
+    "*.pcsss",
+    "*.sass",
+    "*.less",
+    "@babel/polly-fll"
+  ],
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,12 +32,13 @@
     "url-loader": "^1.1.2",
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.5.1"
+    "webpack-dev-server": "^3.5.1",
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config ./webpack.config.dev.js --public --inline --devtool eval --progress --colors --hot --history-api-fallback",
-    "test": "webpack --config ./webpack.config.test.js",
-    "testServer": "webpack-dev-server --config ./webpack.config.test.js"
+    "dev": "webpack-dev-server --config ./webpack.config.dev.js",
+    "build": "webpack --config ./webpack.config.prod.js",
+    "dev2": "webpack-dev-server --config ./build/webpack.config.dev.js"
   },
   "author": "",
   "license": "ISC"
